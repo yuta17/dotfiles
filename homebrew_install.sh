@@ -21,14 +21,11 @@ formulas=(
     curl
     tree
     openssl
-    z
-    colordiff
-    "--without-etcdir zsh"
     zsh-completions
-    "--with-cocoa --srgb emacs"
     cask
     ansible
     peco
+    ag
     hub
     tig
     node
@@ -40,12 +37,14 @@ formulas=(
     sqlite
     httpd22
     sqlite
-    composer
-    markdown
     ctags
-    ssh-copy-id
-    diff-so-fancy
     tmux
+    rbenv
+    ruby-build
+    nodenv
+    node-build
+    redis
+    direnv
 )
 
 "brew tap..."
