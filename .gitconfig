@@ -1,17 +1,17 @@
 [user]
-  name = [Name]
-  email = [Email]
+  name = Hassan
+  email = usgitan@gmail.com
 [alias]
   co = checkout
 [core]
   editor = vim -c \"set fenc=utf-8\"
-  excludesfile = $HOME/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [credential]
   helper = osxkeychain
 [push]
   default = matching
 [ghq]
-  roor = $HOME/src
+  roor = ~/src
 [commit]
-  template = $HOME/.commit_template
+  template = ~/.commit_template
   verbose = true
