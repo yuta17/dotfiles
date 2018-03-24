@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.envrc
+.idea
+tags
+tags.lock
+coverage
+rails_best_practices_output.html
+certbot
