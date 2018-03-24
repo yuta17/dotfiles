@@ -59,29 +59,18 @@ if !isdirectory(s:dein_repo_dir)
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
   " Utility {{{
-  call dein#load_toml(s:dein_dir . '/utility.toml')
+    call dein#load_toml(s:dein_dir . '/utility.toml')
+    " caw
+    nmap <C-K> <Plug>(caw:hatpos:toggle)
+    vmap <C-K> <Plug>(caw:hatpos:toggle)
 
-  call dein#add('tpope/vim-surround')              " Vimのテキストオブジェクトを拡張する
-  call dein#add('tpope/vim-endwise')               " 自動で閉じる
-  call dein#add('tyru/caw.vim.git')                " 複数行コメントアウト
-  call dein#add('tomtom/tcomment_vim')             " コメントに#が用いられる
+    " TODO: powerline
+    " call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
+    " call dein#add('Lokaltog/vim-powerline')
 
-  nmap <C-K> <Plug>(caw:hatpos:toggle)
-  vmap <C-K> <Plug>(caw:hatpos:toggle)
-
-  call dein#add('tpope/vim-surround')              " Vimのテキストオブジェクトを拡張する
-  call dein#add('osyo-manga/vim-watchdogs')        " シンタックスチェック
-
-  call dein#add('christoomey/vim-tmux-navigator')
-
-  " TODO: powerline
-  " call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
-  " call dein#add('Lokaltog/vim-powerline')
-
-  "半角文字の設定
-  let g:Powerline_symbols = 'fancy'
-  set guifont=SourceCodePro-Light:h12
-
+    "半角文字の設定
+    let g:Powerline_symbols = 'fancy'
+    set guifont=SourceCodePro-Light:h12
   " }}}
 
   " Completion {{{
