@@ -59,7 +59,7 @@ if !isdirectory(s:dein_repo_dir)
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
   " Utility {{{
-    call dein#load_toml(s:dein_dir . '/utility.toml')
+  call dein#load_toml(s:dein_dir . '/utility.toml')
 
   call dein#add('tpope/vim-surround')              " Vimのテキストオブジェクトを拡張する
   call dein#add('tpope/vim-endwise')               " 自動で閉じる
