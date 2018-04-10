@@ -30,3 +30,6 @@ repo = 'posva/vim-vue'
 
 [[plugins]] # pug
 repo = 'digitaltoad/vim-pug'
+
+[[plugins]] # scss
+repo = 'cakebaker/scss-syntax.vim'
