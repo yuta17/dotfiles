@@ -27,3 +27,6 @@ hook_add = '''
 
 [[plugins]] # vue
 repo = 'posva/vim-vue'
+
+[[plugins]] # pug
+repo = 'digitaltoad/vim-pug'
