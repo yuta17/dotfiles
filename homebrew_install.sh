@@ -23,7 +23,6 @@ formulas=(
     openssl
     zsh-completions
     cask
-    ansible
     peco
     ag
     hub
@@ -60,16 +59,16 @@ for formula in "${formulas[@]}"; do
 done
 
 casks=(
-    dropbox
-    evernote
     google-chrome
     google-japanese-ime
     slack
     iterm2
-    wunderlist
     docker
-    skype
     gyazo
+    visual-studio-code
+    sequel-pro
+    notion
+    postman
 )
 
 echo "start brew cask install apps..."
