@@ -36,7 +36,6 @@ formulas=(
     sqlite
     httpd22
     sqlite
-    ctags
     tmux
     rbenv
     ruby-build
@@ -44,6 +43,10 @@ formulas=(
     node-build
     redis
     direnv
+    terraform
+    tfenv
+    awscli
+    go
 )
 
 "brew tap..."
@@ -64,11 +67,12 @@ casks=(
     slack
     iterm2
     docker
-    gyazo
     visual-studio-code
-    sequel-pro
+    sequel-pro-nightly
     notion
     postman
+    line
+    deepl
 )
 
 echo "start brew cask install apps..."
