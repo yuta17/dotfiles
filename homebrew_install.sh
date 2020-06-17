@@ -1,3 +1,6 @@
+# インストールが上手くいかない時のエラー解決
+# https://qiita.com/aves/items/1195e64fa30402b7e1f6
+# http://masaru.hateblo.jp/entry/2016/02/08/223120
 # chmod +x ~/dotfiles/homebrew_install.sh
 
 #!/bin/bash
