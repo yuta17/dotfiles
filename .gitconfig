@@ -1,8 +1,9 @@
 [user]
-  name = Hassan
+  name = yuta17
   email = usgitan@gmail.com
 [alias]
   co = checkout
+  push-f = push --force-with-lease
 [core]
   editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore_global
