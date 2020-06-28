@@ -76,6 +76,7 @@ casks=(
     postman
     line
     deepl
+    ngrok
 )
 
 echo "start brew cask install apps..."
