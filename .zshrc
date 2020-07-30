@@ -41,9 +41,9 @@ alias prettyjson="python -m json.tool"
 alias pgstart="pg_ctl -D ~/.postgres start"
 
 # git
-alias gs="git status"
-alias gc="git commit -v"
-alias gch="git checkout"
+alias s="git status"
+alias gc="git commit"
+alias gh="git checkout"
 alias gr="git rebase -i"
 
 # other
