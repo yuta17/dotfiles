@@ -50,6 +50,11 @@ formulas=(
     tfenv
     awscli
     go
+    ghq
+    yarn
+    heroku
+    zsh
+    awscli
 )
 
 "brew tap..."
