@@ -82,28 +82,6 @@ repo = 'szw/vim-tags'
 [[plugins]] # タグジャンプ
 repo = 'soramugi/auto-ctags.vim'
 
-[[plugins]] # オートタグジャンプ (要設定: http://soramugi.hateblo.jp/entry/2013/12/01/150433)
-repo = 'alpaca-tc/alpaca_tags'
-hook_add = '''
-  let g:auto_ctags = 1
-  let g:auto_ctags_directory_list = ['.git']
-  let g:auto_ctags_filetype_mode = 1
-'''
-
-[[plugins]] # easy_motion カーソル移動
-repo = 'alpaca-tc/alpaca_tags'
-hook_add = '''
-  augroup AlpacaTags
-    autocmd!
-    if exists(':Tags')
-      autocmd BufWritePost Gemfile TagsBundle
-      autocmd BufEnter * TagsSet
-      " 毎回保存と同時更新する場合はコメントを外す
-      autocmd BufWritePost * TagsUpdate
-    endif
-  augroup END
-'''
-
 [[plugins]] # easy_motion カーソル移動
 repo = 'Lokaltog/vim-easymotion'
 
