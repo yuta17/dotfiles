@@ -36,10 +36,7 @@ formulas=(
     "vim --with-lua"
     mysql
     postgresql
-    sqlite
     httpd22
-    sqlite
-    tmux
     rbenv
     ruby-build
     nodenv
@@ -81,7 +78,6 @@ casks=(
     postman
     line
     deepl
-    ngrok
 )
 
 echo "start brew cask install apps..."
