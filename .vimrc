@@ -3,147 +3,11 @@
 let mapleader = "\<Space>"
 
 " ノーマルモード
-nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :wq<CR>
 nnoremap <Leader>e :q!<CR>
-nnoremap <Leader>h 0
-nnoremap <Leader>l $
-nnoremap <Leader>p :CtrlP<CR>
-nnoremap <Leader>m :MultipleCursorsFind
-nnoremap <silent> p p`]
-nnoremap th  :tabfirst<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tt  :tabedit<CR>
-nnoremap <Leader>tr :TranslateGoogle<CR>
-
-" 挿入モード
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-
-" ビジュアルモード
-vnoremap <Leader>h 0
-vnoremap <Leader>l $
-vnoremap <silent> p p`]
-vnoremap <silent> y y`]
-vnoremap <Leader>m :MultipleCursorsFind
 
 " クリップボードをon
 set clipboard=unnamed,autoselect
-
-"---------------------------
-" プラグイン管理 dein.vim
-"---------------------------
-
-" プラグインが実際にインストールされるディレクトリ
-let s:dein_dir = expand('~/dotfiles/.vim/dein')
-
-" dein.vim 本体
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
-
-" dein.vim がなければ github から落としてくる
-if &runtimepath !~# '/dein.vim'
-
-if !isdirectory(s:dein_repo_dir)
-  execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir,  ':p')
-  endif
-
-  call dein#begin(expand('~/.vim/dein'))
-
-  call dein#add('Shougo/dein.vim')
-  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-
-  " Utility {{{
-    call dein#load_toml(s:dein_dir . '/utility.toml')
-    " caw
-    nmap <C-K> <Plug>(caw:hatpos:toggle)
-    vmap <C-K> <Plug>(caw:hatpos:toggle)
-
-    " TODO: powerline
-    " call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
-    " call dein#add('Lokaltog/vim-powerline')
-
-    "半角文字の設定
-    let g:Powerline_symbols = 'fancy'
-    set guifont=SourceCodePro-Light:h12
-  " }}}
-
-  " Completion {{{
-    call dein#load_toml(s:dein_dir . '/completion.toml')
-
-    " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-  " }}}
-
-  " Searching/Moving {{{
-    call dein#load_toml(s:dein_dir . '/moving.toml')
-  " }}}
-
-  " Git {{{
-    call dein#load_toml(s:dein_dir . '/git.toml')
-
-    " normal git
-    nnoremap <Leader>gr  :Git rebase -i<Space>
-    nnoremap <Leader>go  :Git checkout .<CR>
-    nnoremap gps :Git push origin<Space>
-    nnoremap gpl :Git pull<Space>
-
-    " vim-fugitive
-    nnoremap gs :Gstatus<CR><C-w>T
-    nnoremap gr :Ggrep<Space>
-
-    " vim-unite-giti
-    nnoremap gb  :Unite giti/branch<CR>
-    nnoremap <Leader>gb  :Gblame<CR>
-    nnoremap gl  :Unite giti/log<CR>
-
-    " agit - vimでtigのようなものを表示
-    nnoremap <Leader>ag :Agit<CR>
-  " }}}
-
-  " Syntastic{{
-    call dein#add('scrooloose/syntastic') " 静的解析
-    " --------------------------------
-    " rubocop
-    " --------------------------------
-    " syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
-    " active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
-    let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
-    let g:syntastic_ruby_checkers = ['rubocop']
-  " }}}
-
-  " Syntax {{{
-    call dein#load_toml(s:dein_dir . '/syntax.toml')
-
-    " auto syntax
-    augroup AutoSyntastic
-      autocmd!
-      autocmd BufWritePost *.c,*.cpp call s:syntastic()
-    augroup END
-    function! s:syntastic()
-      SyntasticCheck
-      call lightline#update()
-    endfunction
-  " }}}
-
-  " Color {{{
-    call dein#add('w0ng/vim-hybrid')
-  " }}}
-
-  call dein#end()
-
-if dein#check_install()
-  call dein#install()
-endif
-
-"---------------------------
-" dein.vim 終了
-"---------------------------
 
 "-------------------------
 " 基本設定 Basics
@@ -250,7 +114,6 @@ augroup END
 
 hi clear CursorLine
 hi CursorLine gui=underline
-highlight CursorLine ctermbg=black guibg=black
 
 " コマンド実行中は再描画しない
 set lazyredraw
@@ -271,19 +134,13 @@ set complete+=k            " 補完に辞書ファイル追加
 " カラー関連 Colors
 "-------------------------------------------------------------------------------
 
-colorscheme hybrid
+" ハイライト on
 syntax on
 set t_Co=256
 
-" ハイライト on
-" syntax enable
-
 " 補完候補の色づけ for vim7
- hi Pmenu ctermbg=255 ctermfg=0 guifg=#000000 guibg=#999999
  hi PmenuSel ctermbg=blue ctermfg=black
- hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
  hi PmenuSbar ctermbg=0 ctermfg=9
- hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 
 " 行番号の色を設定
  hi LineNr ctermfg=0
@@ -364,14 +221,3 @@ function! LightLineMode()
         \ &ft == 'vimshell' ? 'VimShell' :
         \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
-
-"-------------------------------------------------------------------------------
-" その他
-"-------------------------------------------------------------------------------
-
-"ruby 実行コマンド
-nnoremap <C-e> :!ruby %
-
-" tagsジャンプの時に複数ある時は一覧表示
-
-nnoremap <C-]> g<C-]>
