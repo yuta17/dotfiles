@@ -14,5 +14,4 @@
 [ghq]
   roor = ~/src
 [commit]
-  template = ~/.commit_template
   verbose = true
