@@ -21,29 +21,21 @@ setopt nolistbeep
 setopt auto_cd
 function chpwd() { ls }
 
-#alias
-#general
+# alias
 alias l="ls -al"
-alias ms="mysql.server start"
 
-#rails
+## rails
 alias be="bundle exec"
 alias bi="bundle install -j4 --path vendor/bundle"
-alias rc="rails c"
-alias rs="rails s"
-alias dm="rake db:migrate"
 alias rspec="rspec -fd"
 
-# alias pgstart="pg_ctl -l /usr/local/var/postgres/server.log start"
+## alias pgstart="pg_ctl -l /usr/local/var/postgres/server.log start"
 alias pgstart="pg_ctl -D ~/.postgres start"
 
-# git
+## git
 alias s="git status"
-alias gc="git commit"
-alias gh="git checkout"
-alias gr="git rebase -i"
 
-# other
+## other
 alias e='ghq list -p | ag -v vendor | p cd'
 alias redis-server='redis-server /usr/local/etc/redis.conf'
 
@@ -79,14 +71,8 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH=/usr/local/bin:$PATH
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 bindkey -e
 
 vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
-alias vim='vscode'
+
+alias vim='vscode' # joke
