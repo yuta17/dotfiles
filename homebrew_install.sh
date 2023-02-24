@@ -62,6 +62,7 @@ casks=(
     postman
     line
     deepl
+    zoom
 )
 
 echo "start brew cask install apps..."
