@@ -16,13 +16,11 @@ which brew >/dev/null 2>&1 && brew update
 
 echo "ok. run brew upgrade..."
 
-brew upgrade --all
+brew upgrade
 
 formulas=(
     git
-    wget
     curl
-    tree
     openssl
     zsh-completions
     cask
@@ -32,33 +30,19 @@ formulas=(
     tig
     node
     python3
-    lua
-    "vim --with-lua"
     mysql
-    postgresql
-    httpd22
     rbenv
     ruby-build
     nodenv
     node-build
     redis
     direnv
-    terraform
-    tfenv
-    awscli
-    go
     ghq
     yarn
-    heroku
     zsh
-    awscli
 )
 
 "brew tap..."
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
-brew tap homebrew/apache
 brew tap sanemat/font
 
 echo "start brew install apps..."
@@ -82,11 +66,10 @@ casks=(
 
 echo "start brew cask install apps..."
 for cask in "${casks[@]}"; do
-    brew cask install $cask
+    brew install --cask $cask
 done
 
 brew cleanup
-brew cask cleanup
 
 cat << END
 
