@@ -1,3 +1,6 @@
+
+ZSH_THEME="af-magic"
+
 plugins=(git ruby bundler brew rails emoji-clock)
 
 # コマンドをtypoしたときに聞きなおしてくれる
@@ -27,7 +30,7 @@ alias pgstart="pg_ctl -D ~/.postgres start"
 ## git
 alias gs="git status"
 
-## others
+## other
 alias e='ghq list -p | ag -v vendor | p cd'
 alias redis-server='redis-server /usr/local/etc/redis.conf'
 
@@ -67,15 +70,18 @@ bindkey -e
 
 vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
 
+alias vim='vscode' # joke
+
 # exports
 export EDITOR=vim
-export ZSH=$HOME/.oh-my-zsh
-export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$HOME/.rbenv/shims:/usr/local/bin:$PATH"
+export PATH="$HOME/.nodenv/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
-ZSH_THEME="af-magic"
 
 # evals
 eval "$(direnv hook zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)" 
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
