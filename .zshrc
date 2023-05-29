@@ -17,21 +17,20 @@ setopt auto_cd
 function chpwd() { ls }
 
 # alias
-alias l="ls -al"
 
 ## rails
 alias be="bundle exec"
 alias bi="bundle install -j4 --path vendor/bundle"
 alias rspec="rspec -fd"
 
-## alias pgstart="pg_ctl -l /usr/local/var/postgres/server.log start"
-alias pgstart="pg_ctl -D ~/.postgres start"
-
 ## git
 alias gs="git status"
 
-## other
+## others
+alias l="ls -al"
 alias e='ghq list -p | ag -v vendor | p cd'
+alias vim='vscode'
+alias pgstart="pg_ctl -D /usr/local/var/postgres start"
 alias redis-server='redis-server /usr/local/etc/redis.conf'
 
 # pecoで絞り込んだ出力結果に対してコマンドを実行
@@ -64,19 +63,16 @@ function peco-select-history() {
     zle redisplay
 }
 zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-bindkey -e
 
 vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* }
 
-alias vim='vscode' # joke
 
 # exports
 export EDITOR=vim
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.rbenv/shims:/usr/local/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,3 +81,6 @@ eval "$(direnv hook zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)" 
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
+
+# bindkeys
+bindkey '^r' peco-select-history
