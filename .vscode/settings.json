@@ -1,0 +1,118 @@
+{
+  "git.terminalAuthentication": false,
+  "git.openRepositoryInParentFolders": "always",
+  "editor.inlineSuggest.enabled": true,
+  "editor.cursorBlinking": "solid",
+  "editor.tabSize": 2,
+  "editor.fontFamily": "Monaco",
+  "editor.fontSize": 12,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.useLanguageServer": true,
+  "solargraph.definitions": true,
+  "solargraph.diagnostics": true,
+  "solargraph.useBundler": false,
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.lint": {
+    "rubocop": true,
+    "editor.formatOnSaveTimeout": 5000,
+  },
+  "[ruby]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "ruby.format": "rubocop",
+  "workbench.iconTheme": "vscode-icons",
+  "vim.useSystemClipboard": true,
+  "vim.handleKeys": {
+    "<D-c>": false,
+    "<D-v>": false
+  },
+  "editor.minimap.enabled": false,
+  "terminal.integrated.copyOnSelection": true,
+  "workbench.editor.enablePreview": false,
+  "files.watcherExclude": {
+    "**/.cocoapods/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.rvm/**": true,
+    "**/Dropbox/**": true,
+    "**/GoogleDrive/**": true,
+    "**/Library/**": true,
+    "**/node_modules/**": true,
+    "**/Pictures/**": true,
+    "**/vendor/bundle/**": true
+  },
+  "sync.gist": "72e07f6dda836b4bbeebca40541af370",
+  "sync.quietSync": false,
+  "sync.removeExtensions": true,
+  "sync.syncExtensions": true,
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.forceDownload": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "go.useLanguageServer": true,
+  "prettier.disableLanguages": [
+    "markdown",
+    "html.erb"
+  ],
+  "prettier.singleQuote": true,
+  "mssql.connections": [
+    {
+      "server": "{{put-server-name-here}}",
+      "database": "{{put-database-name-here}}",
+      "user": "{{put-username-here}}",
+      "password": "{{put-password-here}}"
+    }
+  ],
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true
+  },
+  "dart.flutterSdkPaths": [
+    "/Users/hasada/fvm/versions"
+  ],
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  "cSpell.ignoreRegExpList": [
+    "[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "markdown",
+    "ruby",
+    "dart",
+  ],
+  "cSpell.userWords": [
+    "activerecord",
+    "asana",
+    "autofocus",
+    "bonchan",
+    "constantize",
+    "cupertino",
+    "datetime",
+    "dotenv",
+    "downcase",
+    "freemium",
+    "hokenbo",
+    "klass",
+    "klow",
+    "neumorphic",
+    "otomo",
+    "prefs",
+    "rollbar",
+    "serializable",
+    "showable",
+    "smbc",
+    "strftime",
+    "tatus",
+    "unprocessable",
+    "unscoped",
+    "urlsafe"
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+}
