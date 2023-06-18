@@ -59,23 +59,12 @@
     "html.erb"
   ],
   "prettier.singleQuote": true,
-  "mssql.connections": [
-    {
-      "server": "{{put-server-name-here}}",
-      "database": "{{put-database-name-here}}",
-      "user": "{{put-username-here}}",
-      "password": "{{put-password-here}}"
-    }
-  ],
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true
   },
-  "dart.flutterSdkPaths": [
-    "/Users/hasada/fvm/versions"
-  ],
   "search.exclude": {
     "**/.fvm": true
   },
@@ -91,23 +80,19 @@
     "activerecord",
     "asana",
     "autofocus",
-    "bonchan",
     "constantize",
     "cupertino",
     "datetime",
     "dotenv",
     "downcase",
     "freemium",
-    "hokenbo",
     "klass",
     "klow",
     "neumorphic",
-    "otomo",
     "prefs",
     "rollbar",
     "serializable",
     "showable",
-    "smbc",
     "strftime",
     "tatus",
     "unprocessable",
