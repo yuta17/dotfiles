@@ -4,7 +4,7 @@
 [alias]
   co = checkout
   push-f = push --force-with-lease
-	ac = !aicommits -a
+  ac = !aicommits -a
 [core]
   editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore_global
