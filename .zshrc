@@ -24,7 +24,7 @@ alias bi="bundle install -j4 --path vendor/bundle"
 alias rspec="rspec -fd"
 
 ## git
-alias gs="git status"
+alias s="git status"
 
 ## others
 alias l="ls -al"
